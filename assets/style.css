@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Leckerli+One&family=Nunito+Sans:wght@300&family=Patrick+Hand&family=Playfair+Display+SC&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,8 @@
 
 body {
     color: #383232;
+    font-family: 'Playfair Display SC', serif;
+    background-color: #4169e1;
 }
 
 h1 {
@@ -14,14 +17,17 @@ h1 {
     padding-bottom: 2%;
     letter-spacing: 10px;
     font-size: 500%;
+    color: #FFD700;
 }
 
 h2 {
     text-align: center;
+    color: #FFD700;
 }
 
 p {
     text-align: justify;
+    color: #FFD700;
 }
 
 .content {
@@ -49,4 +55,8 @@ p {
 
 #result-button {
     display: none;
+}
+
+#start-page {
+    font-family: 'Playfair Display SC', serif;
 }
