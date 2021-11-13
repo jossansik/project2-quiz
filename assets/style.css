@@ -73,6 +73,12 @@ button {
     text-align: center;
     margin: auto;
     display: none;
+    color: #FFD700;
+}
+
+#result-page button {
+    background-color: darkgreen;
+    color: #FFF;
 }
 
 #result-button {
@@ -133,4 +139,9 @@ button {
     color: #FFFFFF;
     float: right;
     background-color: darkolivegreen;
+}
+
+#chart-result {
+    width: 100%;
+    height: 350px;
 }

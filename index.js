@@ -1,3 +1,6 @@
+google.charts.load('current', {
+    'packages': ['corechart']
+});
 let answers = [];
 
 function startQuiz() {
@@ -113,11 +116,39 @@ function showResult() {
         });
     }
 
-    // let incorectResultCount = questions.length - correctResultCount;
+    let div = document.createElement('div');
+    div.innerText = correctResultCount + " / " + questions.length + " Correct answers";
 
-    document.getElementById('result-page').innerText = correctResultCount + " / " + questions.length + " Correct answers";
+    document.getElementById('result-page').insertBefore(div, document.getElementById('chart-result'));
     document.getElementById('game-page').style.display = 'none';
     document.getElementById('result-page').style.display = 'block';
+
+    google.charts.setOnLoadCallback(drawChart(correctResultCount, questions.length));
+}
+
+function reloadPage() {
+    location.reload();
+}
+
+function drawChart(correctAnswerCount, totalQuestions) {
+    var data = google.visualization.arrayToDataTable([
+        ['Quiz', 'Answered questions'],
+        ['Correct answers', correctAnswerCount],
+        ['Incorect answers', totalQuestions - correctAnswerCount],
+    ]);
+
+    var options = {
+        colors: ['darkgreen', '#AB2330'],
+        backgroundColor: '#4169e1',
+        pieHole: 0.5,
+        pieSliceTextStyle: {
+            color: 'black',
+        },
+        legend: 'none'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('chart-result'));
+    chart.draw(data, options);
 }
 
 let questions = [{
@@ -306,7 +337,6 @@ function getAnswerOptions(questionId) {
             }, {
                 answer: 'Race car driver'
             }];
-
         default:
             return [];
     };
