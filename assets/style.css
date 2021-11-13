@@ -7,20 +7,20 @@
 }
 
 body {
-    color: #383232;
     font-family: 'Playfair Display SC', serif;
     background-color: #4169e1;
+    margin-bottom: 10%;
 }
 
 h1 {
     text-align: center;
-    padding-bottom: 2%;
     letter-spacing: 10px;
     font-size: 500%;
     color: #FFD700;
 }
 
 h2 {
+    padding-bottom: 5%;
     text-align: center;
     color: #FFD700;
 }
@@ -30,15 +30,37 @@ p {
     color: #FFD700;
 }
 
+button {
+    cursor: pointer;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    margin: 2px;
+    color: black;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #FFF;
+}
+
 .content {
     padding-top: 5%;
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
 }
 
 #start-page {
     text-align: center;
     margin: auto;
+}
+
+#start-page-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 #game-page {
@@ -55,8 +77,60 @@ p {
 
 #result-button {
     display: none;
+    color: #FFFFFF;
+    float: right;
+    background-color: darkolivegreen;
 }
 
 #start-page {
+    text-align: justify;
+    text-align-last: center;
     font-family: 'Playfair Display SC', serif;
+}
+
+#start-page button {
+    color: #FFF;
+    background-color: darkgreen;
+}
+
+#question {
+    text-align: justify;
+    text-align-last: center;
+    color: #FFD700;
+    padding-bottom: 3%;
+}
+
+#answer-options {
+    display: inline-block;
+    text-align: left;
+    color: #AB2330;
+}
+
+#answer-options div {
+    width: 100%;
+    display: inline-flex;
+}
+
+#answer-options img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+#answer-options button {
+    width: 100%;
+}
+
+#answer-options i {
+    padding-left: 10px;
+    display: inline-block;
+    color: darkgreen;
+    vertical-align: middle;
+}
+
+#next-question-button {
+    color: #FFFFFF;
+    float: right;
+    background-color: darkolivegreen;
 }

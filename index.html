@@ -14,13 +14,8 @@
     <div class="content">
         <div id="start-page">
             <h1>QUIZ</h1>
-            <h2>Test your knowledge about the Swedish royal family</h2>
-            <div class="start-icons">
-                <i class="fas fa-home"></i>
-                <i class="fas fa-home"></i>
-                <i class="fas fa-home"></i>
-                <i class="fas fa-home"></i>
-            </div>
+            <h2>Test your knowledge about the Swedish monarchy</h2>
+            <img id="start-page-image" src="./noun_The Queen_1585362.webp" alt="Queen">
             <div>
                 <button onclick="startQuiz();">START</button>
             </div>
@@ -30,28 +25,35 @@
             <div id="question"></div>
             <div id="answer-options">
                 <div>
-                    <i class="fas fa-home"></i>
+                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
                     <button onclick="answerQuestion(0);">
-                    <span id="answer-id-0"></span>
-                </button></div>
+                        <span id="answer-id-0"></span>
+                    </button>
+                </div>
                 <div>
-                    <i class="fas fa-home"></i>
+                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
                     <button onclick="answerQuestion(1);">
                         <span id="answer-id-1"></span>
-                </button></div>
+
+                    </button>
+                </div>
                 <div>
-                    <i class="fas fa-home"></i>
+                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
                     <button onclick="answerQuestion(2);">
                         <span id="answer-id-2"></span>
-                </button></div>
+                    </button>
+                </div>
                 <div>
-                    <i class="fas fa-home"></i>
+                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
                     <button onclick="answerQuestion(3);">
                         <span id="answer-id-3"></span>
-                </button></div>
+                    </button>
+                </div>
             </div>
-            <button id="next-question-button" onclick="nextQuestion();" disabled="disabled">Next question</button>
-            <button id="result-button" onclick="showResult();" disabled="disabled">Show result</button>
+            <div>
+                <button id="next-question-button" onclick="nextQuestion();" disabled="disabled">Next question</button>
+                <button id="result-button" onclick="showResult();" disabled="disabled">Show result</button>
+            </div>
         </div>
         <div id="result-page"></div>
     </div>
