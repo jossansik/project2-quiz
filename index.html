@@ -12,9 +12,9 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/1dce53d2b5.js" async crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Royal Quiz</title>
 </head>
 
@@ -23,7 +23,7 @@
         <div id="start-page">
             <h1>QUIZ</h1>
             <h2>Test your knowledge about the Swedish monarchy</h2>
-            <img id="start-page-image" src="assets/images/queen.webp" alt="Queen">
+            <img id="start-page-image" src="assets/images/queen.webp" alt="A stylized drawing of a queen">
             <div class="start-quiz">
                 <button onclick="startQuiz();">START QUIZ</button>
             </div>
@@ -33,20 +33,20 @@
             <div id="question"></div>
             <div id="answer-options">
                 <div>
-                    <img src="assets/images/royal crown.webp" alt="Gold crown">
+                    <img src="assets/images/royal_crown.webp" alt="Gold crown">
                     <button onclick="answerQuestion(0);">
                         <span id="answer-id-0"></span>
                     </button>
                 </div>
                 <div>
-                    <img src="assets/images/royal scepter.webp" alt="Royal scepter">
+                    <img src="assets/images/royal_scepter.webp" alt="Royal scepter">
                     <button onclick="answerQuestion(1);">
                         <span id="answer-id-1"></span>
 
                     </button>
                 </div>
                 <div>
-                    <img src="assets/images/royal orb.webp" alt="Royal orb">
+                    <img src="assets/images/royal_orb.webp" alt="Royal orb">
                     <button onclick="answerQuestion(2);">
                         <span id="answer-id-2"></span>
                     </button>
@@ -68,7 +68,7 @@
             <button id="restart-button" onclick="reloadPage();">Try again</button>
         </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

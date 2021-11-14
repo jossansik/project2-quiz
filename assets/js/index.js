@@ -215,7 +215,7 @@ let questions = [{
     },
     {
         answerId: 2,
-        question: "'13. According to the book ”Carl XVI Gustaf: The Reluctant Monarch”, the Swedish King’s dream job was not ruling the country but instead an entirely different trade, what?'"
+        question: 'According to the book ”Carl XVI Gustaf: The Reluctant Monarch”, the Swedish King’s dream job was not ruling the country but instead an entirely different trade, what?'
     },
     {
         answerId: 1,
