@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://kit.fontawesome.com/1dce53d2b5.js" async crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -16,9 +23,9 @@
         <div id="start-page">
             <h1>QUIZ</h1>
             <h2>Test your knowledge about the Swedish monarchy</h2>
-            <img id="start-page-image" src="./noun_The Queen_1585362.webp" alt="Queen">
+            <img id="start-page-image" src="/assets/images/queen.webp" alt="Queen">
             <div>
-                <button onclick="startQuiz();">START</button>
+                <button onclick="startQuiz();">START QUIZ</button>
             </div>
         </div>
         <div id="game-page">
@@ -26,26 +33,26 @@
             <div id="question"></div>
             <div id="answer-options">
                 <div>
-                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
+                    <img src="assets/images/royal crown.webp" alt="Gold crown">
                     <button onclick="answerQuestion(0);">
                         <span id="answer-id-0"></span>
                     </button>
                 </div>
                 <div>
-                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
+                    <img src="assets/images/royal scepter.webp" alt="Royal scepter">
                     <button onclick="answerQuestion(1);">
                         <span id="answer-id-1"></span>
 
                     </button>
                 </div>
                 <div>
-                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
+                    <img src="assets/images/royal orb.webp" alt="Royal orb">
                     <button onclick="answerQuestion(2);">
                         <span id="answer-id-2"></span>
                     </button>
                 </div>
                 <div>
-                    <img src="./noun_The Queen_1585362.webp" alt="Queen">
+                    <img src="assets/images/key.webp" alt="Gold key">
                     <button onclick="answerQuestion(3);">
                         <span id="answer-id-3"></span>
                     </button>
@@ -58,7 +65,7 @@
         </div>
         <div id="result-page">
             <div id="chart-result"></div>
-            <button onclick="reloadPage();">Try again</button>
+            <button id="restart-button" onclick="reloadPage();">Try again</button>
         </div>
     </div>
     <script type="text/javascript" src="index.js"></script>

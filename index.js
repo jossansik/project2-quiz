@@ -1,8 +1,11 @@
+// Load google chart javascript.
 google.charts.load('current', {
     'packages': ['corechart']
 });
+// Defining user answer list as an empty array.
 let answers = [];
 
+// Function that is called when user press 'START QUIZ'.
 function startQuiz() {
     document.getElementById('start-page').style.display = 'none';
     document.getElementById('game-page').style.display = 'block';
@@ -18,6 +21,7 @@ function startQuiz() {
     }
 }
 
+// Function that is called everyime a user select a answer.
 function answerQuestion(answerId) {
     let currentQuestionId = document.getElementById("question-number").innerText - 1;
 
@@ -70,6 +74,7 @@ function answerQuestion(answerId) {
     }
 }
 
+// Function that is called when the user continues to the next question.
 function nextQuestion() {
     let currentQuestionId = document.getElementById("question-number").innerText;
 
@@ -106,8 +111,10 @@ function nextQuestion() {
     document.getElementById('next-question-button').disabled = true;
 }
 
+// Function that is triggered when user has finished the game to calculate the result.
 function showResult() {
     let correctResultCount = 0;
+    // For each question, get the correct answer count based on user selection.
     for (let questionIndex = 0; questionIndex < questions.length; questionIndex++) {
         answers.forEach(answer => {
             if (questionIndex === answer.questionId && questions[questionIndex].answerId == answer.answerId) {
@@ -123,34 +130,41 @@ function showResult() {
     document.getElementById('game-page').style.display = 'none';
     document.getElementById('result-page').style.display = 'block';
 
+    // Loading chart into page.
     google.charts.setOnLoadCallback(drawChart(correctResultCount, questions.length));
 }
 
+// Takes user back to the start page by reloading the entire page.
 function reloadPage() {
     location.reload();
 }
 
+// Defining the PieChart for the result page.
 function drawChart(correctAnswerCount, totalQuestions) {
+    // Setup google chart properties.
     var data = google.visualization.arrayToDataTable([
         ['Quiz', 'Answered questions'],
         ['Correct answers', correctAnswerCount],
         ['Incorect answers', totalQuestions - correctAnswerCount],
     ]);
 
+    // Defining options for the google chart.
     var options = {
         colors: ['darkgreen', '#AB2330'],
         backgroundColor: '#4169e1',
         pieHole: 0.5,
         pieSliceTextStyle: {
-            color: 'black',
+            color: 'white',
         },
         legend: 'none'
     };
 
+    // Using PieChart as chart which is drawn to the chart-result div.
     var chart = new google.visualization.PieChart(document.getElementById('chart-result'));
     chart.draw(data, options);
 }
 
+// Using an array with questions.
 let questions = [{
         answerId: 1,
         question: 'Sweden’s present King is Carl XVI Gustaf. He ascended the throne on September 15, 1973. But what number in the order is he?'
@@ -203,9 +217,14 @@ let questions = [{
         answerId: 2,
         question: "'13. According to the book ”Carl XVI Gustaf: The Reluctant Monarch”, the Swedish King’s dream job was not ruling the country but instead an entirely different trade, what?'"
     },
+    {
+        answerId: 1,
+        question: 'In the upper class, it is common with nicknames, so also for the royals. What was Carl XVI Gustaf called by his friends in his younger years?'
+    }
 ];
 
 function getAnswerOptions(questionId) {
+    // Giving the user the available answers depending on the question.
     switch (questionId) {
         case 0:
             return [{
@@ -336,6 +355,16 @@ function getAnswerOptions(questionId) {
                 answer: 'Excavator operator'
             }, {
                 answer: 'Race car driver'
+            }];
+        case 13:
+            return [{
+                answer: 'Lippi'
+            }, {
+                answer: 'Tjabo'
+            }, {
+                answer: 'Gubbis'
+            }, {
+                answer: 'Challe'
             }];
         default:
             return [];
