@@ -68,6 +68,11 @@ button {
     width: 40%;
 }
 
+.start-quiz {
+    text-align: center;
+    margin: auto;
+}
+
 #game-page {
     text-align: center;
     margin: auto;
